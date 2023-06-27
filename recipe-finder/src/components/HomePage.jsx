@@ -1,55 +1,34 @@
+import { Link } from "react-router-dom"
+
 const HomePage = () => {
+
   return (
-    <div>
-      <header>
-        <h1>Welcome to Recipe Finder</h1>
-      </header>
-      <main>
-        <section>
-          <h2>About Us</h2>
-          <p>
-            At Recipe Finder, we are passionate about providing you with the
-            most delicious and mouth-watering food options. Our experienced
-            chefs work tirelessly to create unique and flavorful recipes that
-            will satisfy your cravings.
-          </p>
-        </section>
-        <section>
-          <h2>Featured Recipes</h2>
-          <div className="recipe-card">
-            <img src="https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-threeByTwoMediumAt2X-v2.jpg" alt="Recipe" />
-            <h3>Delicious Pasta Carbonara</h3>
-            <p>
-              Indulge in the creamy and savory flavors of our classic Pasta
-              Carbonara. Made with fresh ingredients and love, this recipe is
-              sure to become your favorite comfort food.
-            </p>
-            <a href="/recipes/pasta-carbonara">View Recipe</a>
-          </div>
-          <div className="recipe-card">
-            <img src="https://sugarspunrun.com/wp-content/uploads/2022/12/Beef-Stew-recipe-1-of-1.jpg" alt="Recipe" />
-            <h3>Hearty Beef Stew</h3>
-            <p>
-              Warm up with a bowl of our hearty Beef Stew. Packed with tender
-              beef, vegetables, and rich flavors, this stew is perfect for
-              chilly evenings.
-            </p>
-            <a href="/recipes/beef-stew">View Recipe</a>
-          </div>
-        </section>
-        <section>
-          <h2>Contact Us</h2>
-          <p>
-            Have any questions or feedback? We would love to hear from you! Reach
-            out to our friendly customer support team at{' '}
-            <a href="mailto:brian.shehu2@gmail.com">brian.shehu2@gmail.com</a>.
-          </p>
-        </section>
-      </main>
-      <footer>
-      </footer>
+    <div className="mx-auto my-8 min-h-screen">
+      <div className="h-[850px]">
+
+        <img
+          className="w-full h-[700px] object-cover"
+          src=""
+          alt="Homepage Background"
+        />
+
+
+        <p className="text-center text-gray-800 mt-[40px] text-[20px]">
+        Welcome to Tasty Delights.These are recipes that I have made throughout my years of cooking .
+        </p>
+
+        <div className="mt-[30px] flex justify-center">
+          <Link to={"/recipes"}>
+            <button className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Get Started
+              </span>
+            </button>
+          </Link>
+        </div>
+      </div>
     </div>
   );
-};
+}
 
 export default HomePage;
