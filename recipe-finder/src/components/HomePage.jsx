@@ -4,7 +4,7 @@ const HomePage = () => {
 
   return (
     <div className="mx-auto my-8 min-h-screen">
-      <div className="h-[850px]">
+      <div className="h-[850px] bg-red-100">
 
         <img
           className="w-[1000px] h-[700px] object-cover mx-auto"
