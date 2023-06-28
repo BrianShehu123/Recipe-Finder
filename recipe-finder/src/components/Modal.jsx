@@ -23,7 +23,6 @@ const Modal = () => {
       imageSrc: "",
       description: recipeDescription,
     };
-    setRecipes([...recipes, newRecipe]); // Add the new recipe to the recipes array
     closeModal();
   };
 
