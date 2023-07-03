@@ -2,11 +2,10 @@ import { PropTypes } from "prop-types";
 import { useState } from "react";
 
 const initialRecipeFormState = {
-  name: "Hamburger",
-  country: "Hamburg",
+  name: "Mashed potatoes ",
+  country: "France ",
   imageUrl:
-    "https://c4.wallpaperflare.com/wallpaper/143/223/715/food-burgers-hamburgers-fast-food-wallpaper-preview.jpg",
-  ingredients: { ingredients: "I will be updating this soon!" },
+    "https://www.jocooks.com/wp-content/uploads/2019/03/mashed-potatoes-1-7.jpg",
 };
 
 const AddRecipeForm = ({ onAddRecipe }) => {
