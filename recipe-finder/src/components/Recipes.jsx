@@ -1,15 +1,22 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-import recipes from "../Recipes";
-import Modal from "../components/Modal";
+import recipes from "../utils/Recipes";
+import Modal from "../ui/Modal";
 
 const Recipes = () => {
+  Recipes.propTypes = {
+    recipes: PropTypes.array,
+  }
   const [searchTerm, setSearchTerm] = useState("");
+  //const [initialRecipes, setRecipes] = useState(initialRecipes);
 
   // Filter the recipes based on the search term
   const filteredRecipes = recipes.filter((recipe) =>
     recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  console.log(filteredRecipes);
 
   // Handle input change in the search bar
   const handleInputChange = (event) => {
@@ -54,6 +61,7 @@ const Recipes = () => {
                 <p>{recipe.description}</p>
               </div>
             ))}
+            
           </div>
         </div>
       </div>

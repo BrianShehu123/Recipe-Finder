@@ -4,8 +4,8 @@ import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import HomePage from "./components/HomePage"
 //import Contact from "./pages/Contact"
-import About from "./pages/About"
-import Recipes from "./pages/Recipes"
+
+import Recipes from "./components/Recipes"
 
 function App() {
 
@@ -15,7 +15,6 @@ function App() {
         <NavBar />
         <Routes>
           <Route exact path="/" element={<HomePage />}></Route>
-          <Route exact path="/about" element={<About />}></Route>
           <Route exact path="/recipes" element={<Recipes />}></Route>
         </Routes>
         <Footer />
