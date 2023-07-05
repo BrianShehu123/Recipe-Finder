@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import recipes from "../utils/Recipes";
+import recipes from "../Recipes";
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);

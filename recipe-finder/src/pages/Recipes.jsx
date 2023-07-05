@@ -1,8 +1,8 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-import recipes from "../utils/Recipes";
-import Modal from "../ui/Modal";
+import recipes from "../Recipes";
+import Modal from "../components/Modal";
 
 const Recipes = () => {
   Recipes.propTypes = {

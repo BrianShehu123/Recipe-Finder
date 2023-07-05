@@ -2,10 +2,8 @@ import { Route, Routes, BrowserRouter } from "react-router-dom"
 
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
-import HomePage from "./components/HomePage"
-//import Contact from "./pages/Contact"
-
-import Recipes from "./components/Recipes"
+import HomePage from "./pages/HomePage"
+import Recipes from "./pages/Recipes"
 
 function App() {
 
