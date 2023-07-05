@@ -1,0 +1,51 @@
+{"recipes": [
+  {
+    "id": 1,
+    "title": "Roasted Potatoes",
+    "imageSrc": "https://www.foodnetwork.com/content/dam/images/food/fullset/2003/9/29/0/ig1a07_roasted_potatoes.jpg",
+    "description": "Golden-brown and irresistibly crispy, roasted potatoes are the perfect comfort food. With a caramelized exterior and fluffy interior, each bite delivers a burst of savory flavor and a satisfying crunch. Seasoned with aromatic herbs, they are an easy and delicious addition to any home-cooked meal."
+  },
+  {
+    "id": 2,
+    "title": "Chicken Cutlet",
+    "imageSrc": "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2019/12/20/0/FNK_Chicken-Cutlet_H_s4x3.jpg.rend.hgtvcom.616.462.suffix/1576855328048.jpeg",
+    "description": "Tender and golden, chicken cutlets are a mouthwatering dish that's perfect for a homemade meal. Seasoned to perfection, these chicken cutlets offer a burst of savory flavors that will satisfy your taste buds"
+  },
+  {
+    "id": 3,
+    "title": "Lasagna",
+    "imageSrc": "https://thecozycook.com/wp-content/uploads/2022/04/Lasagna-Recipe-f.jpg",
+    "description": "Lasagna: Layers of tender pasta, rich sauces, and melty cheese create a comforting and flavor-packed dish that's irresistible."
+  },
+  {
+    "id": 4,
+    "title": "Classic Margherita Pizza",
+    "imageSrc": "https://ohsweetbasil.com/wp-content/uploads/four-cheese-margherita-pizza-recipe-12-scaled.jpg",
+    "description": "Indulge in the simplicity of a classic Margherita pizza with fresh basil leaves, mozzarella cheese, and tomato sauce on a thin and crispy crust."
+  },
+  {
+    "id": 5,
+    "title": "Air-fry salmon",
+    "imageSrc": "https://lexiscleankitchen.com/wp-content/uploads/2022/02/Air-Fryer-Salmon-6.jpg",
+    "description": "Air fry salmon to perfection for a quick and delicious meal. With its moist and flaky texture, air-fried salmon offers a delightful contrast to its crispy exterior. Simply season the fillets, place them in the air fryer, and let it work its magic. In no time, you'll have a healthy and flavorful salmon dish that's ready to be enjoyed."
+  },
+  {
+    "id": 6,
+    "title": "Creamy spicy linguine",
+    "imageSrc": "https://www.dontgobaconmyheart.co.uk/wp-content/uploads/2019/11/spicy-chicken-pasta-1.jpg",
+    "description": "Creamy and spicy linguine: Indulgent pasta with a velvety cream sauce and a fiery kick."
+  },
+  {
+    "id": 7,
+    "title": "Air-fry porkchop",
+    "imageSrc": "https://sweetandsavorymeals.com/wp-content/uploads/2020/02/air-fryer-pork-chops-SweetAndSavoryMeals-3.jpg",
+    "description": "Air fry pork chops for a quick and delicious meal. With the air fryer's hot circulating air, you'll achieve perfectly juicy and tender pork chops with a crispy exterior. Season the chops to your liking, place them in the air fryer, and let them cook to golden perfection. In no time, you'll enjoy flavorful pork chops with a delightful crunch."
+  },
+  {
+    "id": 8,
+    "title": "Hamburger",
+    "imageSrc": "https://www.thecookierookie.com/wp-content/uploads/2023/04/featured-stovetop-burgers-recipe-500x500.jpg",
+    "description": "Hamburgers: Juicy beef patties nestled in a soft bun, topped with your favorite fixings. A classic comfort food that satisfies with its mouthwatering blend of flavors and textures."
+  }
+]
+}

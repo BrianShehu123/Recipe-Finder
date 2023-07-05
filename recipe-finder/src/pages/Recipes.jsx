@@ -3,8 +3,9 @@ import PropTypes from "prop-types";
 
 import recipes from "../Recipes";
 import Modal from "../components/Modal";
+import SecondPart from "../SecondPart"
 
-const Recipes = () => {
+function Recipes () {
   Recipes.propTypes = {
     recipes: PropTypes.array,
   }
@@ -29,10 +30,9 @@ const Recipes = () => {
         <h1 className="text-4xl font-bold text-center mb-4 text-gray-800">Welcome to Tasty Delights</h1>
         <p className="text-xl text-center">These are recipes that I have done over the years of cooking.</p>
 
-
+        <SecondPart/>
         <div className="mt-8">
           <div className="flex justify-between items-center mb-4">
-            <>
               <Modal />
               <div className="mr-4">
                 <input
@@ -43,7 +43,6 @@ const Recipes = () => {
                   className="px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 w-full md:w-96"
                 />
               </div>
-            </>
           </div>
 
 
@@ -57,6 +56,7 @@ const Recipes = () => {
                   className="rounded w-full mb-4 shadow object-cover object-center h-56 sm:h-64 md:h-80"
                   src={recipe.imageSrc}
                   alt={recipe.title}
+
                 />
                 <p>{recipe.description}</p>
               </div>
@@ -67,6 +67,6 @@ const Recipes = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Recipes;
