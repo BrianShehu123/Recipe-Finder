@@ -1,10 +1,10 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
-import recipes from "../Recipes";
-
-const Modal = () => {
+const Modal = ({ addRecipe }) => {
   const [showModal, setShowModal] = useState(false);
   const [recipeTitle, setRecipeTitle] = useState("");
+  const [imageURL, setImageURL] = useState("");
   const [recipeDescription, setRecipeDescription] = useState("");
 
   const handleModalOpen = () => {
@@ -14,6 +14,7 @@ const Modal = () => {
   const handleModalClose = () => {
     setShowModal(false);
     setRecipeTitle("");
+    setImageURL("");
     setRecipeDescription("");
   };
 
@@ -21,11 +22,10 @@ const Modal = () => {
     event.preventDefault();
     const newRecipe = {
       title: recipeTitle,
-      imageSrc: "https://example.com/placeholder-image.jpg", // Replace with the actual image URL
+      imageSrc: imageURL,
       description: recipeDescription,
     };
-    const updatedRecipes = [...recipes, newRecipe];
-    console.log("Updated recipes:", updatedRecipes);
+    addRecipe(newRecipe);
     handleModalClose();
   };
 
@@ -33,9 +33,9 @@ const Modal = () => {
     <div className="ml-[10px]">
       <button
         type="button"
-        className=" hover:text-white border border-blue-700 hover:bg-blue-800 
+        className="hover:text-white border border-blue-700 hover:bg-blue-800 
         focus:ring-blue-300 font-medium text-sm px-5 py-2.5 text-center mr-2 mb-4 ml-2 dark:border-teal-500 
-        dark:text-teal-500 dark:hover:text-white dark:hover:bg-yellow-500 "
+        dark:text-teal-500 dark:hover:text-white dark:hover:bg-yellow-500"
         onClick={handleModalOpen}
       >
         Add a Recipe
@@ -56,6 +56,18 @@ const Modal = () => {
                   id="recipeTitle"
                   value={recipeTitle}
                   onChange={(event) => setRecipeTitle(event.target.value)}
+                  className="border border-gray-300 rounded-md px-3 py-2 w-full"
+                />
+              </div>
+              <div className="mb-4">
+                <label htmlFor="imageURL" className="block font-medium mb-1">
+                  Image URL
+                </label>
+                <input
+                  type="text"
+                  id="imageURL"
+                  value={imageURL}
+                  onChange={(event) => setImageURL(event.target.value)}
                   className="border border-gray-300 rounded-md px-3 py-2 w-full"
                 />
               </div>
@@ -91,6 +103,10 @@ const Modal = () => {
       )}
     </div>
   );
+};
+
+Modal.propTypes = {
+  addRecipe: PropTypes.func.isRequired,
 };
 
 export default Modal;
