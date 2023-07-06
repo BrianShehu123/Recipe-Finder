@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 import recipes from "../Recipes";
 import Modal from "../components/Modal";
+import Editing from "../components/Editing";
+import Delete from "../components/Delete"; // Import the Delete component
 
 const Recipes = () => {
   Recipes.propTypes = {
@@ -11,6 +13,7 @@ const Recipes = () => {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [recipesState, setRecipesState] = useState(recipes);
+  const [editingRecipe, setEditingRecipe] = useState(null); // Add new state
 
   // Filter the recipes based on the search term
   const filteredRecipes = recipesState.filter((recipe) =>
@@ -33,6 +36,27 @@ const Recipes = () => {
 
   const addRecipe = (newRecipe) => {
     setRecipesState((prevRecipes) => [...prevRecipes, newRecipe]);
+  };
+
+  const startEditing = (recipe) => {
+    setEditingRecipe(recipe);
+  };
+
+  const updateRecipe = (updatedRecipe) => {
+    setRecipesState((prevRecipes) =>
+      prevRecipes.map((recipe) =>
+        recipe === editingRecipe ? updatedRecipe : recipe
+      )
+    );
+    setEditingRecipe(null);
+  };
+
+  const deleteRecipe = (recipeId) => {
+    if (window.confirm("Are you sure you want to delete this recipe?")) {
+      setRecipesState((prevRecipes) =>
+        prevRecipes.filter((recipe) => recipe.id !== recipeId)
+      );
+    }
   };
 
   return (
@@ -69,13 +93,31 @@ const Recipes = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {filteredRecipes.map((recipe, index) => (
               <div key={index}>
-                <h3 className="text-lg font-bold mb-4">{recipe.title}</h3>
-                <img
-                  className="rounded w-full mb-4 shadow object-cover object-center h-56 sm:h-64 md:h-80"
-                  src={recipe.imageSrc}
-                  alt={recipe.title}
-                />
-                <p>{recipe.description}</p>
+                {editingRecipe === recipe ? (
+                  <Editing
+                    recipe={recipe}
+                    updateRecipe={updateRecipe}
+                    cancelEditing={() => setEditingRecipe(null)}
+                  />
+                ) : (
+                  <>
+                    <h3 className="text-lg font-bold mb-4">{recipe.title}</h3>
+                    <img
+                      className="rounded w-full mb-4 shadow object-cover```jsx
+                      object-center h-56 sm:h-64 md:h-80"
+                      src={recipe.imageSrc}
+                      alt={recipe.title}
+                    />
+                    <p>{recipe.description}</p>
+                    <button
+                      className="bg-blue-500 text-white px-4 py-2 rounded mt-2"
+                      onClick={() => startEditing(recipe)}
+                    >
+                      Edit
+                    </button>
+                    <Delete recipe={recipe} onDelete={deleteRecipe} />
+                  </>
+                )}
               </div>
             ))}
           </div>
@@ -85,4 +127,4 @@ const Recipes = () => {
   );
 };
 
-export default Recipes
+export default Recipes;
